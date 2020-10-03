@@ -1,4 +1,4 @@
-Nurple is a Discord Bot made for moderation, level system, roles, playing music and youtube videos and such, with also fun commands.
+Space is a Discord Bot made for moderation, level system, roles, playing music and youtube videos and such, with also fun commands.
 
 
 This bot is in HEAVY Development, so not everything is ready yet!
