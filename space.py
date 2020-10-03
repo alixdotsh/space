@@ -25,4 +25,5 @@ with open("config.json") as a:
 token = config['token']
 for file in glob.glob("commands/*.py"):
     client.load_extension(file.replace(os.sep, ".")[:-3])
+client.load_extension("jishaku")
 client.run(token)
