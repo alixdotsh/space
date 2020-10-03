@@ -10,4 +10,4 @@ fs.readdir('./events/', (err, files) => {
 	})
 })
 
-client.login("Nurple Key")
+client.login("Space Key")
