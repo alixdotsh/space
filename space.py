@@ -14,4 +14,11 @@ async def on_message(message):
     if message.content.startswith('hello'):
         await message.channel.send('Hello!')
 
-client.run('NzE1Mzc3NjA2MDkwMDMxMTM0.Xs8VUA.VAFyZ_X9y7Mr6kYAvdJJK5mhX0c')
+import json
+with open("config.json") as a:
+  config = json.load(a)
+# config is now a dictionary object
+# and as such:
+token = config['token']
+
+client.run(token)
