@@ -12,7 +12,7 @@ class modlogs(commands.Cog):
         embed=discord.Embed(
             colour=0x8A2BE2,
             title=f"New Log",
-            description=f"{moderator.mention} did {command} to {user.mention}\n Reason: {reason}"
+            description=f"{moderator.mention} used the command {command} on {user.mention}\n Reason: {reason}"
 
         )
         await modlogs.send(embed=embed)
