@@ -10,7 +10,7 @@ class modlogs(commands.Cog):
             await modlogs.set_permissions(modlogs.guild.default_role, send_messages=False)
             await modlogs.set_permissions(modlogs.guild.me, send_messages=True)
         embed=discord.Embed(
-            embed.set_author(name=f"{user.name}", icon_url=user.avatar_url)
+            embed.set_author(name=f"{user.name}", icon_url=user.avatar_url),
             colour=0x8A2BE2,
             title=f"New Audit Log",
             description=f"{moderator.mention} to {user.mention}\n Command: {command}\n Reason: {reason}"
