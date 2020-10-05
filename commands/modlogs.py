@@ -14,7 +14,7 @@ class modlogs(commands.Cog):
             title=f"New Audit Log",
             description=f"{moderator.mention} to {user.mention}\n Command: {command}\n Reason: {reason}"
         )
-        embed.set_author(name=user.name)
+        embed.set_author(moderator.name, icon_url=moderator.avatar_url)
         await modlogs.send(embed=embed)
 
 def setup(bot):
