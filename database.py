@@ -3,7 +3,7 @@ import asyncio
 import asyncpg
 
 async def run():
-    conn = await asyncpg.connect(user='Space', password='gnviking7',
+    conn = await asyncpg.connect(user='Space', password='no',
                                  database='Space', host='127.0.0.1')
     values = await conn.fetch('''SELECT * FROM mytable''')
     await conn.close()
