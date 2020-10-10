@@ -1,0 +1,3 @@
+create table
+modlogs
+(guild_id bigint primary key, modlog_channel bigint);
