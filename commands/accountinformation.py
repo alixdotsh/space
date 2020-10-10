@@ -25,6 +25,7 @@ class accountinformation(commands.Cog):
         embed.add_field(name="Account Age", value=humanize.precisedelta(dt.now()-user.created_at))
         embed.add_field(name="Joined Server", value=user.joined_at)
         embed.add_field(name="Join Server Age", value=humanize.precisedelta(dt.now()-user.joined_at))
+        await ctx.send(embed=embed)
 
 
 def setup(bot):
