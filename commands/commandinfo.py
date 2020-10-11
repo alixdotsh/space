@@ -11,7 +11,6 @@ class commandinfo(commands.Cog):
             colour=0x8A2BE2,
             title=f"Executable Commands",
         )
-        embed.set_thumbnail(url=user.avatar_url)
         embed.add_field(name="-ban", value="bans the user from the server")
         embed.add_field(name="-kick", value="kicks the user from the server")
         embed.add_field(name="-mute", value="mutes the user for the given amount of time in minutes")
