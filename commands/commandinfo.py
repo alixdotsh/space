@@ -10,13 +10,8 @@ class commandinfo(commands.Cog):
         embed=discord.Embed(
             colour=0x8A2BE2,
             title=f"Executable Commands"
+            description=f"-ban: bans the user\n -kick: kicks the user\n -mute: mutes a user for x amount of time\n -selectchannel_modlogs <channel>: chooses where modlogs go\n -accountinfo- basic account information"
         )
-        embed.add_field(name="Ban", value="-ban: bans a user")
-        embed.add_field(name="Kick", value="-kick: kicks a user")
-        embed.add_field(name="Mute", value="-mute: mutes a user for _ amount of time given")
-        embed.add_field(name="Setchannel_modlogs", value="-setchannel_modlogs <channel>: Chooses and saves where modlogs will go")
-        embed.add_field(name="AccountInformation", value="-accountinfo: basic account information")
-        await ctx.send(embed=embed)
 
 def setup(bot):
     bot.add_cog(commandinfo())
