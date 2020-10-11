@@ -1,10 +1,10 @@
 import discord
 from discord.ext import commands
-class chelp(commands.Cog):
+class commandinfo(commands.Cog):
 
     #running the command
     @commands.command()
-    async def chelp(self, ctx, user: discord.Member):
+    async def commandinfo(self, ctx, user: discord.Member):
 
          # Make and send an embed to the channel listing all the possible commands to run
         embed=discord.Embed(
@@ -19,4 +19,4 @@ class chelp(commands.Cog):
         await ctx.send(embed=embed)
 
 def setup(bot):
-    bot.add_cog(chelp())
+    bot.add_cog(commandinfo())
