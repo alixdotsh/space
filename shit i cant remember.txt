@@ -1,3 +1,8 @@
 create table
 modlogs
 (guild_id bigint primary key, modlog_channel bigint);
+
+create table
+prefix
+(guild_id bigint primary key, prefix text);
+
