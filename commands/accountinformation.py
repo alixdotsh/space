@@ -26,7 +26,7 @@ class accountinformation(commands.Cog):
         embed.add_field(name="ID", value=user.id)
         embed.add_field(name="Account Created", value=user.created_at.strftime("%m/%d/%Y %H:%M:%S"))
         embed.add_field(name="Account Age", value=humanize.precisedelta(dt.now()-user.created_at))
-        embed.add_field(name="Joined Server", value=user.joined_at.strftime("%m/%d/%Y %H:%M:%S")
+        embed.add_field(name="Joined Server", value=user.joined_at.strftime("%m/%d/%Y %H:%M:%S"))
         embed.add_field(name="Join Server Age", value=humanize.precisedelta(dt.now()-user.joined_at))
         await ctx.send(embed=embed)
 
