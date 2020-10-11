@@ -12,7 +12,7 @@ class commandinfo(commands.Cog):
             title=f"Executable Commands",
             description=f"-ban: bans the user\n -kick: kicks the user\n -mute: mutes a user for x amount of time\n -selectchannel_modlogs <channel>: chooses where modlogs go\n -accountinfo: basic account stuff"
         )
-        await modlogs.send(embed=embed)
-        
+        await ctx.send(embed=embed)
+
 def setup(bot):
     bot.add_cog(commandinfo())
