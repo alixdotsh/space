@@ -4,7 +4,7 @@ class help(commands.Cog):
 
     #running the command
     @commands.command()
-    async def commands_help(self, ctx, user: discord.Member):
+    async def commandhelp(self, ctx, user: discord.Member):
 
          # Make and send an embed to the channel listing all the possible commands to run
         embed=discord.Embed(
@@ -19,4 +19,4 @@ class help(commands.Cog):
         await ctx.send(embed=embed)
 
 def setup(bot):
-    bot.add_cog(commands_help())
+    bot.add_cog(commandhelp())
