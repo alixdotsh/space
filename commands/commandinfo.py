@@ -9,8 +9,8 @@ class commandinfo(commands.Cog):
          # Make and send an embed to the channel listing all the possible commands to run
         embed=discord.Embed(
             colour=0x8A2BE2,
-            title=f"Executable Commands"
-            description=f"-ban: bans the user\n -kick: kicks the user\n -mute: mutes a user for x amount of time\n -selectchannel_modlogs <channel>: chooses where modlogs go\n -accountinfo: basic account stats"
+            title=f"Executable Commands",
+            description=f"-ban: bans the user\n -kick: kicks the user\n -mute: mutes a user for x amount of time\n -selectchannel_modlogs <channel>: chooses where modlogs go\n -accountinfo: basic account stuff"
         )
 
 def setup(bot):
