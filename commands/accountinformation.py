@@ -13,7 +13,7 @@ class accountinformation(commands.Cog):
             user=ctx.author
 
         if user.nick is not None:
-            name=f"{user.name}{user.nick}"
+            name=f"{user.name} ({user.nick})"
         else:
             name=f"{user.name}"
 
