@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-class chelp(Commands.cog):
+class chelp(commands.Cog):
 
     #running the command
     @commands.command()
