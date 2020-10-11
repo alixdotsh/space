@@ -17,4 +17,4 @@ class setprefix(commands.Cog):
         await ctx.send(f"I have successfully changed the prefix to `{prefix}`")
 
 def setup(bot):
-    bot.add_cog(selectchannel())
+    bot.add_cog(setprefix())
