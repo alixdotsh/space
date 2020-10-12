@@ -1,8 +1,10 @@
-create table
-modlogs
-(guild_id bigint primary key, modlog_channel bigint);
+CREATE TABLE modlogs(
+    guild_id BIGINT PRIMARY KEY,
+    modlog_channel BIGINT
+);
 
-create table
-prefix
-(guild_id bigint primary key, prefix text);
 
+CREATE TABLE prefix(
+    guild_id BIGINT PRIMARY KEY,
+    prefix TEXT
+);

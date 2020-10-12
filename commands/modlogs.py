@@ -3,7 +3,7 @@ from discord.ext import commands
 import asyncpg
 
 
-class modlogs(commands.Cog):
+class Modlogs(commands.Cog):
 
     @commands.Cog.listener()
     async def on_modlog(self, user, moderator, command, reason):
@@ -18,7 +18,7 @@ class modlogs(commands.Cog):
         if len(values) == 0:
             modlogs = None
         else:
-            modlogs = moderator.guild.get_channel (values[0]["modlog_channel"])
+            modlogs = moderator.guild.get_channel(values[0]["modlog_channel"])
 
         # Create a new modlogs channel if one doesn't exist
         if modlogs is None:
@@ -32,9 +32,9 @@ class modlogs(commands.Cog):
             await conn.close()
 
         # Make and send an embed to the channel
-        embed=discord.Embed(
+        embed = discord.Embed(
             colour=0x8A2BE2,
-            title=f"New Audit Log",
+            title="New Audit Log",
             description=f"{moderator.mention} to {user.mention}\n Command: {command}\n Reason: {reason}"
         )
         embed.set_author(name=moderator.name, icon_url=moderator.avatar_url)
@@ -42,4 +42,4 @@ class modlogs(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(modlogs())
+    bot.add_cog(Modlogs())

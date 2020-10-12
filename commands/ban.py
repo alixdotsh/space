@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
-class ban(commands.Cog):
+
+
+class Ban(commands.Cog):
 
     @commands.command()
     @commands.bot_has_permissions(ban_members=True)
@@ -12,4 +14,4 @@ class ban(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(ban())
+    bot.add_cog(Ban())

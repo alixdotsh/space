@@ -1,8 +1,10 @@
-import discord
-from discord.ext import commands
 import glob
 import os
+import json
+
 import asyncpg
+from discord.ext import commands
+
 
 async def get_prefix(bot, message):
     conn = await asyncpg.connect(user='space', password='hellowo', database='space', host='127.0.0.1')
@@ -15,9 +17,11 @@ async def get_prefix(bot, message):
 
 client = commands.Bot(command_prefix=get_prefix)
 
+
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
+
 
 @client.event
 async def on_message(message):
@@ -27,11 +31,13 @@ async def on_message(message):
     if message.content.startswith('hello'):
         await message.channel.send('Hello!')
     await client.process_commands(message)
-import json
+
+
 with open("config.json") as a:
-  config = json.load(a)
+    config = json.load(a)
+
+
 # config is now a dictionary object
-# and as such:
 token = config['token']
 for file in glob.glob("commands/*.py"):
     client.load_extension(file.replace(os.sep, ".")[:-3])

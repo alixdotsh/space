@@ -1,15 +1,17 @@
 import discord
 from discord.ext import commands
-class commandinfo(commands.Cog):
 
-    #running the command
+
+class CommandInfo(commands.Cog):
+
+    # running the command
     @commands.command()
     async def commandinfo(self, ctx):
 
-         # Make and send an embed to the channel listing all the possible commands to run
-        embed=discord.Embed(
+        # Make and send an embed to the channel listing all the possible commands to run
+        embed = discord.Embed(
             colour=0x8A2BE2,
-            title=f"Executable Commands",
+            title="Executable Commands",
         )
         embed.add_field(name="ban", value="bans the user from the server")
         embed.add_field(name="kick", value="kicks the user from the server")
@@ -19,6 +21,6 @@ class commandinfo(commands.Cog):
         embed.add_field(name="setprefix", value="changes the default prefix")
         await ctx.send(embed=embed)
 
+
 def setup(bot):
-    bot.add_cog(commandinfo())
-    
+    bot.add_cog(CommandInfo())
