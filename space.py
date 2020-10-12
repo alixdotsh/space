@@ -2,8 +2,18 @@ import discord
 from discord.ext import commands
 import glob
 import os
+import asyncpg
 
-client = commands.Bot(command_prefix = '-')
+async def ger_prefix(bot, message):
+    conn = await asyncpg.connect(user='space', password='hellowo', database='space', host='127.0.0.1')
+    values = await conn.fetch('''SELECT * FROM prefix WHERE guild_id = $1''', message.guild.id)
+    await conn.close()
+    if len(value) == 0:
+        return '-'
+    return values[0]['prefix']
+
+
+client = commands.Bot(command_prefix=get_prefix)
 
 @client.event
 async def on_ready():
