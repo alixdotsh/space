@@ -10,4 +10,3 @@ To invite the bot to your server, please use https://discord.com/api/oauth2/auth
 Any questions needed can be reached out on the issues page.
 
 
-There is no license, but TLDR, you can do whatever you want with my code as long as you credit me.
